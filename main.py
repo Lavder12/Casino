@@ -22,7 +22,7 @@ conn = connect_db()
 
 def login_user(connection):
     cursor = connection.cursor(dictionary=True)
-    login = input('Enter your login: ')
+    login = input('Enter your login: ').lower()
     password = input('Enter your password: ')
     try:
         # Выполняем запрос с параметрами
@@ -42,9 +42,9 @@ def login_user(connection):
 def register_user(connection):
     cursor = connection.cursor()
 
-    first_name = input('Enter your first name: ')
-    last_name = input('Enter your last name: ')
-    email = input('Enter your email: ')
+    first_name = input('Enter your first name: ').lower()
+    last_name = input('Enter your last name: ').lower()
+    email = input('Enter your email: ').lower()
     password = input('Enter your password: ')
     repeat_password = input('Repeat password: ')
 
